@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blox Fruits - Guía Completa 🗡️🔫🍎</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; min-height: 100vh; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { text-align: center; font-size: 2.2rem; margin-bottom: 10px; color: #ffd700; text-shadow: 0 0 20px #ffd70050; }
+        .subtitle { text-align: center; margin-bottom: 30px; color: #aaa; }
+        .tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 25px; flex-wrap: wrap; }
+        .tab { padding: 10px 20px; background: #2a2a4a; border: none; color: #fff; border-radius: 8px; cursor: pointer; font-size: 0.95rem; transition: all 0.3s; }
+        .tab.active { background: #ffd700; color: #000; font-weight: bold; }
+        .tab:hover { transform: translateY(-2px); }
+        .search-box { width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: none; background: #2a2a4a; color: #fff; font-size: 1rem; }
+        .section { display: none; }
+        .section.active { display: block; }
+        table { width: 100%; border-collapse: collapse; background: #2a2a4a80; border-radius: 10px; overflow: hidden; }
+        th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #444; font-size: 0.9rem; }
+        th { background: #ffd70020; color: #ffd700; font-weight: bold; }
+        tr:hover { background: #33335580; }
+        
+        /* Colores de rareza */
+        .r-comun { color: #ffffff; }
+        .r-poco { color: #1eff00; }
+        .r-raro { color: #00ccff; }
+        .r-legendario { color: #ffd700; }
+        .r-mitico { color: #ff6600; font-weight: bold; }
+        
+        .codes-box { background: #2a2a4a80; padding: 20px; border-radius: 10px; }
+        .code-item { padding: 10px 0; border-bottom: 1px solid #444; }
+        .code-name { color: #00ff88; font-weight: bold; }
+        .note-box { background: #3a2a4a80; padding: 15px; border-radius: 10px; margin-top: 15px; }
+        footer { text-align: center; margin-top: 40px; color: #666; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚔️ BLOX FRUITS 🍎</h1>
+        <p class="subtitle">Guía completa — Armas, Frutas, Códigos y más</p>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showSection('swords')">🗡️ Espadas</button>
+            <button class="tab" onclick="showSection('guns')">🔫 Pistolas</button>
+            <button class="tab" onclick="showSection('fruits')">🍎 Frutas</button>
+            <button class="tab" onclick="showSection('codes')">🎁 Códigos</button>
+        </div>
+
+        <input type="text" class="search-box" id="searchInput" placeholder="🔍 Buscar..." onkeyup="searchTable()">
+
+        <!-- ============== ESPADAS ============== -->
+        <div id="swords" class="section active">
+            <table id="swordsTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Rareza</th>
+                        <th>💰 Precio</th>
+                        <th>📍 Cómo conseguirlo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Katana</td><td class="r-comun">Común</td><td>1,000 Beli</td><td>Vendedor — Isla de inicio</td></tr>
+                    <tr><td>Cutlass</td><td class="r-comun">Común</td><td>1,000 Beli</td><td>Vendedor — Isla de inicio</td></tr>
+                    <tr><td>Dual Katana</td><td class="r-poco">Poco común</td><td>12,000 Beli</td><td>Vendedor Oeste — Villa Pirata</td></tr>
+                    <tr><td>Iron Mace</td><td class="r-poco">Poco común</td><td>25,000 Beli</td><td>Vendedor Oeste — Villa Pirata</td></tr>
+                    <tr><td>Triple Katana</td><td class="r-raro">Raro</td><td>60,000 Beli</td><td>Vendedor Este — Villa Congelada</td></tr>
+                    <tr><td>Pipe</td><td class="r-raro">Raro</td><td>100,000 Beli</td><td>Vendedor Este — Villa Congelada</td></tr>
+                    <tr><td>Double-Headed Blade</td><td class="r-raro">Raro</td><td>400,000 Beli</td><td>Maestro Espadachín — Skylands</td></tr>
+                    <tr><td>Soul Cane</td><td class="r-raro">Raro</td><td>750,000 Beli</td><td>Living Skeleton — Villa Magma</td></tr>
+                    <tr><td>Bisento</td><td class="r-legendario">Legendario</td><td>1,000,000 Beli</td><td>Maestro Espadachín — Skylands</td></tr>
+                    <tr><td>Shisui</td><td class="r-legendario">Legendario</td><td>2,000,000 Beli</td><td>Vendedor Legendario — Sea 3</td></tr>
+                    <tr><td>Wando</td><td class="r-legendario">Legendario</td><td>2,000,000 Beli</td><td>Vendedor Legendario — Sea 3</td></tr>
+                    <tr><td>Canvander</td><td class="r-legendario">Legendario</td><td>2,000,000 Beli</td><td>Vendedor Legendario — Sea 3</td></tr>
+                    <tr><td>Yama</td><td class="r-legendario">Legendario</td><td>—</td><td>Puzzle Cueva Oculta</td></tr>
+                    <tr><td>Tushita</td><td class="r-legendario">Legendario</td><td>—</td><td>Derrotar a Longma + antorchas</td></tr>
+                    <tr><td>Koko</td><td class="r-legendario">Legendario</td><td>—</td><td>Derrotar a Enel</td></tr>
+                    <tr><td>True Triple Katana</td><td class="r-mitico">Mítico</td><td>2,000,000 Beli</td><td>Maestría 300 en Triple Katana</td></tr>
+                    <tr><td>Dark Blade</td><td class="r-mitico">Mítico</td><td>1,200 Robux</td><td>Gamepass / Trade</td></tr>
+                    <tr><td>Hallow Scythe</td><td class="r-mitico">Mítico</td><td>—</td><td>Derrotar a Soul Reaper</td></tr>
+                    <tr><td>Cursed Dual Katana</td><td class="r-mitico">Mítico</td><td>—</td><td>Maestría 350 en Yama y Tushita</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ============== PISTOLAS ============== -->
+        <div id="guns" class="section">
+            <table id="gunsTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Rareza</th>
+                        <th>💰 Precio</th>
+                        <th>📍 Cómo conseguirlo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Slingshot</td><td class="r-comun">Común</td><td>5,000 Beli</td><td>Vendedor — Ciudad Central</td></tr>
+                    <tr><td>Mosquete</td><td class="r-poco">Poco común</td><td>8,000 Beli</td><td>Vendedor — Ciudad Central</td></tr>
+                    <tr><td>Flintlock</td><td class="r-poco">Poco común</td><td>10,500 Beli</td><td>Vendedor — Ciudad Central</td></tr>
+                    <tr><td>Slingshot Refinado</td><td class="r-raro">Raro</td><td>30,000 Beli</td><td>Vendedor Avanzado — Fortaleza Marina</td></tr>
+                    <tr><td>Doble Flintlock</td><td class="r-raro">Raro</td><td>65,000 Beli</td><td>Vendedor Avanzado — Fortaleza Marina</td></tr>
+                    <tr><td>Cañón</td><td class="r-raro">Raro</td><td>100,000 Beli</td><td>Vendedor Avanzado — Fortaleza Marina</td></tr>
+                    <tr><td>Magma Blaster</td><td class="r-raro">Raro</td><td>—</td><td>Derrotar a Magma Admiral</td></tr>
+                    <tr><td>Acidum Rifle</td><td class="r-raro">Raro</td><td>—</td><td>Derrotar a Jefe de Raid</td></tr>
+                    <tr><td>Kabucha</td><td class="r-legendario">Legendario</td><td>1,500 Fragmentos</td><td>The Strongest God — Isla Remota</td></tr>
+                    <tr><td>Bazooka</td><td class="r-legendario">Legendario</td><td>—</td><td>Derrotar a Wysper (5%)</td></tr>
+                    <tr><td>Skull Guitar</td><td class="r-mitico">Mítico</td><td>—</td><td>Evento Halloween</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ============== FRUTAS ============== -->
+        <div id="fruits" class="section">
+            <table id="fruitsTable">
+                <thead>
+                    <tr>
+                        <th>Fruta</th>
+                        <th>Tipo</th>
+                        <th>Rareza</th>
+                        <th>💰 Precio Beli</th>
+                        <th>💎 Robux</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- COMUNES -->
+                    <tr><td>Rocket (Cohete)</td><td>Natural</td><td class="r-comun">Común</td><td>5,000</td><td>50</td></tr>
+                    <tr><td>Spin (Gira)</td><td>Natural</td><td class="r-comun">Común</td><td>7,500</td><td>75</td></tr>
+                    <tr><td>Blade (Cuchilla)</td><td>Natural</td><td class="r-comun">Común</td><td>30,000</td><td>100</td></tr>
+                    <tr><td>Spring (Resorte)</td><td>Natural</td><td class="r-comun">Común</td><td>60,000</td><td>180</td></tr>
+                    <tr><td>Bomb (Bomba)</td><td>Natural</td><td class="r-comun">Común</td><td>80,000</td><td>220</td></tr>
+                    <tr><td>Spike (Pico)</td><td>Natural</td><td class="r-comun">Común</td><td>180,000</td><td>380</td></tr>
+                    <tr><td>Smoke (Humo)</td><td>Elemental</td><td class="r-comun">Común</td><td>100,000</td><td>250</td></tr>
+                    
+                    <!-- POCO COMUNES -->
+                    <tr><td>Flame (Fuego)</td><td>Elemental</td><td class="r-poco">Poco común</td><td>250,000</td><td>550</td></tr>
+                    <tr><td>Ice (Hielo)</td><td>Elemental</td><td class="r-poco">Poco común</td><td>350,000</td><td>750</td></tr>
+                    <tr><td>Sand (Arena)</td><td>Elemental</td><td class="r-poco">Poco común</td><td>420,000</td><td>850</td></tr>
+                    <tr><td>Dark (Oscuridad)</td><td>Elemental</td><td class="r-poco">Poco común</td><td>500,000</td><td>950</td></tr>
+                    <tr><td>Diamond (Diamante)</td><td>Natural</td><td class="r-poco">Poco común</td><td>600,000</td><td>1,000</td></tr>
+                    <tr><td>Falcon (Halcón)</td><td>Bestia</td><td class="r-poco">Poco común</td><td>550,000</td><td>975</td></tr>
+                    
+                    <!-- RARAS -->
+                    <tr><td>Light (Luz)</td><td>Elemental</td><td class="r-raro">Raro</td><td>650,000</td><td>1,100</td></tr>
+                    <tr><td>Rubber (Goma)</td><td>Natural</td><td class="r-raro">Raro</td><td>750,000</td><td>1,200</td></tr>
+                    <tr><td>Ghost (Fantasma)</td><td>Natural</td><td class="r-raro">Raro</td><td>940,000</td><td>1,275</td></tr>
+                    <tr><td>Magma</td><td>Elemental</td><td class="r-raro">Raro</td><td>960,000</td><td>1,300</td></tr>
+                    
+                    <!-- LEGENDARIAS -->
+                    <tr><td>Quake (Temblor)</td><td>Natural</td><td class="r-legendario">Legendario</td><td>1,000,000</td><td>1,500</td></tr>
+                    <tr><td>Buddha</td><td>Bestia</td><td class="r-legendario">Legendario</td><td>1,200,000</td><td>1,650</td></tr>
+                    <tr><td>Love (Amor)</td><td>Natural</td><td class="r-legendario">Legendario</td><td>1,300,000</td><td>1,700</td></tr>
+                    <tr><td>Creation (Creación)</td><td>Natural</td><td class="r-legendario">Legendario</td><td>1,400,000</td><td>1,750</td></tr>
+                    <tr><td>Spider (Araña)</td><td>Natural</td><td class="r-legendario">Legendario</td><td>1,500,000</td><td>1,800</td></tr>
+                    <tr><td>Sound (Sonido)</td><td>Natural</td><td class="r-legendario">Legendario</td><td>1,700,000</td><td>1,900</td></tr>
+                    <tr><td>Phoenix (Fénix)</td><td>Bestia</td><td class="r-legendario">Legendario</td><td>1,800,000</td><td>2,000</td></tr>
+                    <tr><td>Portal</td><td>Natural</td><td class="r-legendario">Legendario</td><td>1,900,000</td><td>2,000</td></tr>
+                    <tr><td>Lightning (Relámpago)</td><td>Elemental</td><td class="r-legendario">Legendario</td><td>2,100,000</td><td>2,100</td></tr>
+                    <tr><td>Pain (Dolor)</td><td>Natural</td><td class="r-legendario">Legendario</td><td>2,300,000</td><td>2,200</td></tr>
+                    <tr><td>Blizzard (Ventisca)</td><td>Elemental</td><td class="r-legendario">Legendario</td><td>2,400,000</td><td>2,250</td></tr>
+                    
+                    <!-- MÍTICAS -->
+                    <tr><td>Gravity (Gravedad)</td><td>Natural</td><td class="r-mitico">Mítico</td><td>2,500,000</td><td>2,300</td></tr>
+                    <tr><td>Dough (Masa)</td><td>Elemental</td><td class="r-mitico">Mítico</td><td>2,800,000</td><td>2,400</td></tr>
+                    <tr><td>Shadow (Sombra)</td><td>Natural</td><td class="r-mitico">Mítico</td><td>2,900,000</td><td>2,425</td></tr>
+                    <tr><td>Venom (Veneno)</td><td>Natural</td><td class="r-mitico">Mítico</td><td>3,000,000</td><td>2,450</td></tr>
+                    <tr><td>Control</td><td>Natural</td><td class="r-mitico">Mítico</td><td>3,200,000</td><td>2,500</td></tr>
+                    <tr><td>Spirit (Espíritu)</td><td>Natural</td><td class="r-mitico">Mítico</td><td>3,400,000</td><td>2,550</td></tr>
+                    <tr><td>T-Rex</td><td>Bestia</td><td class="r-mitico">Mítico</td><td>2,700,000</td><td>2,350</td></tr>
+                    <tr><td>Mammoth (Mamut)</td><td>Bestia</td><td class="r-mitico">Mítico</td><td>2,700,000</td><td>2,350</td></tr>
+                    <tr><td>Leopard (Leopardo)</td><td>Bestia</td><td class="r-mitico">Mítico</td><td>5,000,000</td><td>3,000</td></tr>
+                    <tr><td>Tiger (Tigre)</td><td>Bestia</td><td class="r-mitico">Mítico</td><td>5,000,000</td><td>3,000</td></tr>
+                    <tr><td>Yeti</td><td>Bestia</td><td class="r-mitico">Mítico</td><td>5,000,000</td><td>3,000</td></tr>
+                    <tr><td>Kitsune</td><td>Bestia</td><td class="r-mitico">Mítico</td><td>8,000,000</td><td>4,000</td></tr>
+                    <tr><td>Dragón</td><td>Bestia</td><td class="r-mitico">Mítico</td><td>15,000,000</td><td>5,000</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ============== CÓDIGOS ============== -->
+        <div id="codes" class="section">
+            <div class="codes-box">
+                <h2 style="text-align: center; color: #ffd700; margin-bottom: 20px;">🎁 Códigos Activos</h2>
+                <div class="code-item"><span class="code-name">Axiore</span> — 20 min de 2x EXP</div>
+                <div class="code-item"><span class="code-name">TantaiGaming</span> — 15 min de 2x EXP</div>
+                <div class="code-item"><span class="code-name">StrawHatMaine</span> — 15 min de 2x EXP</div>
+                <div class="code-item"><span class="code-name">Sub2GamerRobot_EXP1</span> — 30 min de 2x EXP</div>
+                <div class="code-item"><span class="code-name">Sub2Fer999</span> — 2x EXP</div>
+                <div class="code-item"><span class="code-name">Enyu_is_Pro</span> — 2x EXP</div>
+                <div class="code-item"><span class="code-name">Magicbus</span> — 2x EXP</div>
+                <div class="code-item"><span class="code-name">JCWK</span> — 2x EXP</div>
+                <div class="code-item"><span class="code-name">Starcodeheo</span> — Puntos de experiencia doble</div>
+                <div class="code-item"><span class="code-name">Bluxxy</span> — 20 min de 2x EXP</div>
+                <div class="code-item"><span class="code-name">Fudd10_V2</span> — 2 Beli</div>
+                <div class="code-item"><span class="code-name">ENYU_IS_PRO</span> — 20 min de 2x EXP</div>
+                <div class="code-item"><span class="code-name">MAGICBUS</span> — 20 min de 2x EXP</div>
+                <div class="code-item"><span class="code-name">SUB2OFFICIALNOOB</span> — 20 min de 2x EXP</div>
+                <div class="code-item"><span class="code-name">THEGREATACE</span> — 20 min de 2x EXP</div>
+                
+                <div class="note-box">
+                    <p style="color: #ffcc00;"><strong>⚠️ Nota:</strong> Los códigos pueden caducar en cualquier momento. ¡Úsalos rápido!</p>
+                    <p style="color: #aaa; margin-top: 10px; font-size: 0.9rem;">📌 Cómo canjear: Toca el ícono de regalo abajo a la izquierda → escribe el código → pulsa "Redeem"</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            💛 Guía creada por furrin — Información actualizada al 2026
+        </footer>
+    </div>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            event.target.classList.add('active');
+        }
+        function searchTable() {
+            const term = document.getElementById('searchInput').value.toLowerCase();
+            document.querySelectorAll('.section.active tbody tr').forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(term) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
